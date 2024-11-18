@@ -3,7 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:transport_europe/routes/routers_define.dart';
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final AppRoute appRoute;
+  const MyApp({super.key, required this.appRoute});
 
   @override
   Widget build(BuildContext context) {
@@ -11,8 +12,8 @@ class MyApp extends StatelessWidget {
       designSize: const Size(402, 874),
       minTextAdapt: true,
       splitScreenMode: true,
-      child: MaterialApp.router(
-        routerConfig: AppRoute.router,
+      child: MaterialApp(
+        onGenerateRoute: appRoute.generateRoute,
         debugShowCheckedModeBanner: false,
         title: 'Transport Europe',
       ),
