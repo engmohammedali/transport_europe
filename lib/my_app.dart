@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:transport_europe/routes/routers_define.dart';
+import 'package:transport_europe/routes/routes_name.dart';
 
 class MyApp extends StatelessWidget {
   final AppRoute appRoute;
@@ -14,7 +15,16 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       child: MaterialApp(
         onGenerateRoute: appRoute.generateRoute,
+        builder: (context, widget) {
+          return Directionality(
+            textDirection:
+                TextDirection.rtl, // الاتجاه الافتراضي: من اليمين إلى اليسار
+            child: widget!,
+          );
+        },
+        initialRoute: RoutesNames.loginScreen,
         debugShowCheckedModeBanner: false,
+        locale: const Locale('ar', 'SA'),
         title: 'Transport Europe',
       ),
     );

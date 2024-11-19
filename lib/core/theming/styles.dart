@@ -15,4 +15,24 @@ class TextStyles {
     fontWeight: FontWeightHelper.medium,
     color: ColorsManager.darkBlue,
   );
+
+  static TextStyle font24BlackRegular = TextStyle(
+    fontSize: 24.sp,
+    fontWeight: FontWeightHelper.regular,
+    fontFamily: "appfont",
+  );
+
+  static TextStyle font16textbutton = TextStyle(
+    fontSize: 15.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: Colors.white,
+    fontFamily: "appfont",
+  );
+
+  static TextStyle font16form = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.regular,
+    fontFamily: "appfont",
+    color: ColorsManager.formgrey,
+  );
 }
