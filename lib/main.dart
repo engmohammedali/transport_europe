@@ -8,7 +8,6 @@ void main() async {
   runApp(
     MyApp(
       appRoute: AppRoute(),
-      
     ),
   );
 }
