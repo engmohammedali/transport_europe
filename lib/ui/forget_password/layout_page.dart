@@ -6,11 +6,13 @@ class LayoutPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+        ),
+        body: body,
       ),
-      body: body,
     );
   }
 }

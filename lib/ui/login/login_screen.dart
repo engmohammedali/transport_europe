@@ -11,38 +11,41 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: const SizedBox(),
-        backgroundColor: Colors.white,
-      ),
-      body: SingleChildScrollView(
-        padding: EdgeInsets.symmetric(
-          horizontal: 30.w,
-          vertical: 20.h,
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          leading: const SizedBox(),
+          backgroundColor: Colors.white,
+          elevation: 0.0,
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            verticalspace(80),
-            Align(
-              child: Text(
-                "تسجيل الدخول",
-                style: TextStyles.font24BlackRegular,
+        body: SingleChildScrollView(
+          padding: EdgeInsets.symmetric(
+            horizontal: 30.w,
+            vertical: 20.h,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              verticalspace(80),
+              Align(
+                child: Text(
+                  "تسجيل الدخول",
+                  style: TextStyles.font24BlackRegular,
+                ),
               ),
-            ),
-            verticalspace(72),
-            const EmailAndPasswordForm(),
-            verticalspace(20),
-            const ApprovedCondition(),
-            verticalspace(90),
-            AppTextButton(
-              buttonText: "تسجيل الدخول",
-              textStyle:
-                  TextStyles.font16textbutton,
-              onPressed: () {},
-            )
-          ],
+              verticalspace(72),
+              const EmailAndPasswordForm(),
+              verticalspace(20),
+              const ApprovedCondition(),
+              verticalspace(90),
+              AppTextButton(
+                buttonText: "تسجيل الدخول",
+                textStyle:
+                    TextStyles.font16textbutton,
+                onPressed: () {},
+              )
+            ],
+          ),
         ),
       ),
     );

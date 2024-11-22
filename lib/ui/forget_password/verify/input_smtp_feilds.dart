@@ -38,7 +38,7 @@ class _InputSmtpFeildsState extends State<InputSmtpFeilds> {
       width: 50.w,
       height: 48.h,
       textStyle: TextStyle(
-        fontSize: 22.sp,
+        fontSize: 20.sp,
         color: Colors.black,
       ),
       decoration: BoxDecoration(

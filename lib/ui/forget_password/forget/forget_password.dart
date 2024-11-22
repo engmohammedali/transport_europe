@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:transport_europe/core/helpers/space_helper.dart';
 import 'package:transport_europe/core/theming/styles.dart';
 import 'package:transport_europe/core/widgets/app_text_button.dart';
@@ -16,44 +15,43 @@ class ForgetPassword extends StatelessWidget {
     return LayoutPage(
         body: Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          verticalspace(90),
-          Align(
-            child: Text(
-              "نسيت كلمة المرور",
-              style: TextStyles.font24BlackRegular,
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            verticalspace(90),
+            Align(
+              child: Text(
+                "نسيت كلمة المرور",
+                style: TextStyles.font24BlackRegular,
+              ),
             ),
-          ),
-          verticalspace(15),
-          Align(
-            child: Text(
-              "يرجى إدخال عنوان بريدك الالكتروني ",
-              style: TextStyles.font16form,
+            verticalspace(15),
+            Align(
+              child: Text(
+                "يرجى إدخال عنوان بريدك الالكتروني ",
+                style: TextStyles.font16form,
+              ),
             ),
-          ),
-          verticalspace(3),
-          Align(
-            child: Text(
-              "لإرسال رمز التحقق",
-              style: TextStyles.font16form,
+            verticalspace(3),
+            Align(
+              child: Text(
+                "لإرسال رمز التحقق",
+                style: TextStyles.font16form,
+              ),
             ),
-          ),
-          verticalspace(30),
-          const EmailTextForm(),
-          verticalspace(60),
-          AppTextButton(
-            buttonText: "التالي",
-            textStyle: TextStyle(
-              fontSize: 16.sp,
-              color: Colors.white,
-            ),
-            onPressed: () {
-              context.pushNamed(RoutesNames.verifyPage);
-            },
-          )
-        ],
+            verticalspace(30),
+            const EmailTextForm(),
+            verticalspace(60),
+            AppTextButton(
+              buttonText: "التالي",
+              textStyle: TextStyles.font16textbutton,
+              onPressed: () {
+                context.pushNamed(RoutesNames.verifyPage);
+              },
+            )
+          ],
+        ),
       ),
     ));
   }
