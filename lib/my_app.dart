@@ -23,6 +23,15 @@ class MyApp extends StatelessWidget {
           );
         },
         initialRoute: RoutesNames.addAReply6,
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: Colors.blue,
+          ),
+          primaryColor: const Color(0xFF247CFF),
+          scaffoldBackgroundColor: Colors.white,
+          cardColor: Colors.blue.shade50,
+          useMaterial3: true,
+        ),
         debugShowCheckedModeBanner: false,
         locale: const Locale('ar', 'SA'),
         title: 'Transport Europe',
