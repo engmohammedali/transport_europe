@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
             child: widget!,
           );
         },
-        initialRoute: RoutesNames.loginScreen,
+        initialRoute: RoutesNames.addAReply6,
         debugShowCheckedModeBanner: false,
         locale: const Locale('ar', 'SA'),
         title: 'Transport Europe',

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:transport_europe/ui/onBoarding/body_onboarding.dart';
+import 'package:transport_europe/ui/onBoarding/widgets/body_onboarding.dart';
 
 class OnboardingPags extends StatefulWidget {
   OnboardingPags({super.key});
@@ -29,13 +29,11 @@ class _OnboardingPagsState extends State<OnboardingPags> {
               replacement: const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    TextButton(
-                        onPressed: null,
-                        child: Text(
-                          "",
-                        ))
+                    Text(
+                      "",
+                    )
                   ],
                 ),
               ),
@@ -44,7 +42,7 @@ class _OnboardingPagsState extends State<OnboardingPags> {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     TextButton(
                       onPressed: () {
@@ -54,6 +52,7 @@ class _OnboardingPagsState extends State<OnboardingPags> {
                         "تخطي",
                         style: TextStyle(
                           fontSize: 16.sp,
+                          fontFamily: 'appfont',
                           color: const Color.fromRGBO(0, 0, 0, 1),
                         ),
                       ),
@@ -73,27 +72,27 @@ class _OnboardingPagsState extends State<OnboardingPags> {
                     onTap: () {
                       nextPage(1);
                     },
-                    img: 'assets/imgs/shipping-amico.png',
-                    imgEllipse: 'assets/imgs/Ellipse 3.png',
+                    img: 'assets/images/shipping-amico.png',
+                    imgEllipse: 'assets/images/Ellipse 3.png',
                     title: 'اهلا بك في تطبيق Transport Europe',
-                    icon: 'assets/imgs/Arrow left.png',
+                    icon: 'assets/images/Arrow left.png',
                   ),
                   BodyOnboarding(
                     onTap: () {
                       nextPage(2);
                     },
-                    img: 'assets/imgs/Logistics-rafiki (1) 1.png',
-                    imgEllipse: 'assets/imgs/Ellipse 4.png',
+                    img: 'assets/images/Logistics-rafiki (1) 1.png',
+                    imgEllipse: 'assets/images/Ellipse 4.png',
                     title:
                         'تطبيق Transport Europe تطبيق متخصص يجمع جميع شركات الشحن في اوربا',
-                    icon: 'assets/imgs/Arrow left.png',
+                    icon: 'assets/images/Arrow left.png',
                   ),
                   BodyOnboarding(
                     onTap: () {},
-                    img: 'assets/imgs/car3.png',
-                    imgEllipse: 'assets/imgs/Ellipse 5.png',
+                    img: 'assets/images/car3.png',
+                    imgEllipse: 'assets/images/Ellipse 5.png',
                     title: 'استمتع بتطبيق متخصص لما تحتاجه',
-                    icon: 'assets/imgs/ابدا.png',
+                    icon: 'assets/images/ابدا.png',
                   )
                 ],
               ),

@@ -4,6 +4,9 @@ import 'package:transport_europe/core/theming/colors.dart';
 import 'package:transport_europe/core/theming/styles.dart';
 
 class AppTextFormField extends StatelessWidget {
+  final TextInputType? keyboardType;
+  final int? maxLines;
+  final Widget? suffix;
   final EdgeInsetsGeometry? contentPadding;
   final InputBorder? focusedBorder;
   final InputBorder? enabledBorder;
@@ -14,10 +17,14 @@ class AppTextFormField extends StatelessWidget {
   final bool? isObscureText;
   final Widget? suffixIcon;
   final Color? backgroundColor;
+  final double? borderRadius;
   final TextEditingController? controller;
   final Function(String?) validator;
   const AppTextFormField({
     super.key,
+    this.maxLines,
+    this.keyboardType,
+    this.suffix,
     this.contentPadding,
     this.focusedBorder,
     this.enabledBorder,
@@ -30,14 +37,18 @@ class AppTextFormField extends StatelessWidget {
     this.controller,
     required this.validator,
     this.prefixIcon,
+    this.borderRadius,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      maxLines: maxLines ?? 1,
+      keyboardType: keyboardType,
       autovalidateMode: AutovalidateMode.onUserInteraction,
       controller: controller,
       decoration: InputDecoration(
+        suffix: suffix,
         isDense: true,
         contentPadding: contentPadding ??
             EdgeInsets.symmetric(horizontal: 20.w, vertical: 18.h),
@@ -47,7 +58,7 @@ class AppTextFormField extends StatelessWidget {
                 color: ColorsManager.mainBlue,
                 width: 1.3,
               ),
-              borderRadius: BorderRadius.circular(8.0),
+              borderRadius: BorderRadius.circular(borderRadius ?? 8.0),
             ),
         enabledBorder: enabledBorder ??
             OutlineInputBorder(
@@ -55,21 +66,21 @@ class AppTextFormField extends StatelessWidget {
                 color: ColorsManager.lighterGray,
                 width: 1.3,
               ),
-              borderRadius: BorderRadius.circular(8.0),
+              borderRadius: BorderRadius.circular(borderRadius ?? 8.0),
             ),
         errorBorder: OutlineInputBorder(
           borderSide: const BorderSide(
             color: Colors.red,
             width: 1.3,
           ),
-          borderRadius: BorderRadius.circular(8.0),
+          borderRadius: BorderRadius.circular(borderRadius ?? 8.0),
         ),
         focusedErrorBorder: OutlineInputBorder(
           borderSide: const BorderSide(
             color: Colors.red,
             width: 1.3,
           ),
-          borderRadius: BorderRadius.circular(8.0),
+          borderRadius: BorderRadius.circular(borderRadius ?? 8.0),
         ),
         hintStyle: hintStyle ?? TextStyles.font14LightGrayRegular,
         hintText: hintText,
