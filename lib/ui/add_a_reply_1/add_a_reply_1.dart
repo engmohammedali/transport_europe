@@ -4,10 +4,9 @@ import 'package:transport_europe/core/sherd/card_country.dart';
 import 'package:transport_europe/core/theming/colors.dart';
 import 'package:transport_europe/core/theming/font_weight_helper.dart';
 import 'package:transport_europe/core/widgets/app_text_form_feild.dart';
-import 'package:transport_europe/ui/contact_mail/widgets/card_country.dart';
 
-class ContactMail extends StatelessWidget {
-  const ContactMail({super.key});
+class AddAReply1 extends StatelessWidget {
+  const AddAReply1({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +25,7 @@ class ContactMail extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.bottomRight,
                   child: Text(
-                    "نتائج التواصل",
+                    "نتائج زيارة الشركات",
                     style: TextStyle(
                       fontFamily: 'appfont',
                       fontSize: 27,
@@ -54,9 +53,12 @@ class ContactMail extends StatelessWidget {
                 ),
                 hintText: '',
                 validator: (String? users) {},
-                prefixIcon: const Icon(
-                  Icons.search,
-                  size: 25,
+                prefixIcon: IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.search,
+                    size: 25,
+                  ),
                   color: ColorsManager.lightGray,
                 ),
               ),
@@ -70,8 +72,6 @@ class ContactMail extends StatelessWidget {
                           detaiis: '',
                         );
                       }))
-
-              // إضافة مسافة بين الحقول
             ],
           ),
         ),

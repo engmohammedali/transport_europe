@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:transport_europe/core/sherd/img_user.dart';
 import 'package:transport_europe/core/theming/colors.dart';
 import 'package:transport_europe/core/widgets/app_text_form_feild.dart';
 
@@ -32,26 +33,13 @@ class _UserProfileState extends State<UserProfile> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Align(
-                  alignment: Alignment.center,
-                  child: Stack(
-                    children: [
-                      const CircleAvatar(
-                        radius: 59,
-                        backgroundImage: AssetImage('assets/images/user1.png'),
-                      ),
-                      Positioned(
-                          top: -10,
-                          right: -5,
-                          child: IconButton(
-                              onPressed: () {},
-                              icon: const Icon(
-                                Icons.edit,
-                                size: 18,
-                                color: ColorsManager.lightGray,
-                              )))
-                    ],
-                  ),
+                ImgUser(
+                  height: 110,
+                  imgUser: 'assets/images/user1.png',
+                  onTap: () {
+                    print("edit img");
+                  },
+                  width: 110,
                 ),
                 SizedBox(
                   height: 6.h,
@@ -115,7 +103,7 @@ class _UserProfileState extends State<UserProfile> {
                 ),
                 AppTextFormField(
                   keyboardType: TextInputType.visiblePassword,
-                  isObscureText: isvisibility,
+                  isObscureText: !isvisibility,
                   suffixIcon: IconButton(
                       onPressed: () {
                         setState(() {
@@ -124,12 +112,12 @@ class _UserProfileState extends State<UserProfile> {
                       },
                       icon: isvisibility
                           ? const Icon(
-                              Icons.visibility,
-                              color: ColorsManager.lightGray,
-                            )
-                          : const Icon(
                               Icons.visibility_off,
                               color: ColorsManager.btncolor,
+                            )
+                          : const Icon(
+                              Icons.visibility,
+                              color: ColorsManager.lightGray,
                             )),
                   borderRadius: 16,
                   hintText: 'aa******',

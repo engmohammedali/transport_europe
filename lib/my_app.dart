@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
             child: widget!,
           );
         },
-        initialRoute: RoutesNames.addAReply6,
+        initialRoute: RoutesNames.newUserProfile,
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(
             seedColor: Colors.blue,

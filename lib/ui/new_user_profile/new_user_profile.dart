@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:transport_europe/core/sherd/img_user.dart';
 import 'package:transport_europe/core/theming/colors.dart';
 import 'package:transport_europe/core/widgets/app_text_form_feild.dart';
 
@@ -32,31 +33,13 @@ class _UserProfileState extends State<NewUserProfile> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Align(
-                  alignment: Alignment.center,
-                  child: Stack(
-                    children: [
-                      const CircleAvatar(
-                        radius: 54,
-                        backgroundImage:
-                            AssetImage('assets/images/userdefilt.png'),
-                      ),
-                      Positioned(
-                          top: -10,
-                          right: -7,
-                          child: IconButton(
-                              onPressed: () {},
-                              icon: const CircleAvatar(
-                                radius: 9,
-                                backgroundColor: Colors.white,
-                                child: Icon(
-                                  Icons.add_circle_outlined,
-                                  size: 18,
-                                  color: ColorsManager.btncolor,
-                                ),
-                              )))
-                    ],
-                  ),
+                ImgUser(
+                  height: 108.h,
+                  width: 108.w,
+                  icon: Icons.add_circle,
+                  iconColor: ColorsManager.btncolor,
+                  imgUser: 'assets/images/userdefilt.png',
+                  onTap: () {},
                 ),
                 SizedBox(
                   height: 6.h,

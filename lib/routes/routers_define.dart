@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:transport_europe/routes/routes_name.dart';
 import 'package:transport_europe/ui/add_a_reply%206/add_a_reply_6.dart';
+import 'package:transport_europe/ui/add_a_reply/add_a_reply%20.dart';
+import 'package:transport_europe/ui/add_a_reply_1/add_a_reply_1.dart';
 import 'package:transport_europe/ui/contact_mail/contact_mail.dart';
 import 'package:transport_europe/ui/contact_us/contact_us.dart';
 import 'package:transport_europe/ui/edite_message/edite_message.dart';
@@ -12,9 +14,8 @@ import 'package:transport_europe/ui/new_message/new_message.dart';
 import 'package:transport_europe/ui/new_trucks/new_trucks.dart';
 import 'package:transport_europe/ui/new_user_profile/new_user_profile.dart';
 import 'package:transport_europe/ui/notifications/notifications.dart';
-import 'package:transport_europe/ui/onBoarding/onboarding4.dart';
 import 'package:transport_europe/ui/onBoarding/onboarding_pags.dart';
-import 'package:transport_europe/ui/onBoarding/splash.dart';
+import 'package:transport_europe/ui/profile/profile.dart';
 import 'package:transport_europe/ui/user_profile/user_profile.dart';
 import 'package:transport_europe/ui/users/users.dart';
 
@@ -27,10 +28,17 @@ class AppRoute {
         return MaterialPageRoute(
           builder: (_) => OnboardingPags(),
         );
-
-      case RoutesNames.splash:
+      case RoutesNames.users:
         return MaterialPageRoute(
-          builder: (_) => const Splash(),
+          builder: (_) => const Users(),
+        );
+      case RoutesNames.profile:
+        return MaterialPageRoute(
+          builder: (_) => const Profile(),
+        );
+      case RoutesNames.userProfile:
+        return MaterialPageRoute(
+          builder: (_) => const UserProfile(),
         );
       case RoutesNames.newUserProfile:
         return MaterialPageRoute(
@@ -40,9 +48,18 @@ class AppRoute {
         return MaterialPageRoute(
           builder: (_) => NewContactMail(),
         );
+
+      case RoutesNames.addAReply1:
+        return MaterialPageRoute(
+          builder: (_) => const AddAReply1(),
+        );
       case RoutesNames.addAReply6:
         return MaterialPageRoute(
           builder: (_) => const AddAReply6(),
+        );
+      case RoutesNames.addAReply:
+        return MaterialPageRoute(
+          builder: (_) => const AddAReply(),
         );
       case RoutesNames.notifications:
         return MaterialPageRoute(
@@ -60,13 +77,10 @@ class AppRoute {
         return MaterialPageRoute(
           builder: (_) => const NewTrucks(),
         );
-      case RoutesNames.userProfile:
-        return MaterialPageRoute(
-          builder: (_) => const UserProfile(),
-        );
+
       case RoutesNames.newMessage:
         return MaterialPageRoute(
-          builder: (_) => NewMessage(),
+          builder: (_) => const NewMessage(),
         );
       case RoutesNames.messages:
         return MaterialPageRoute(
